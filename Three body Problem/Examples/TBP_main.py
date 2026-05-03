@@ -39,45 +39,82 @@ class Planet:
 		self.vel += self.acc * dt
 
 	def set_accelation(self, value):
-		print(value)
 		self.acc = np.array(value)
 
 	def add_accelation(self, value):
-		print(value)
 		self.acc += np.array(value)
 
 """
 masses = np.array([1e30, 1e30, 1e30])
 
 positions = np.array([
-    [-1.0e11, 0.0],
-    [1.0e11, 0.0],
-    [0.0, 0.0]
+	[-1.0e11, 0.0],
+	[1.0e11, 0.0],
+	[0.0, 0.0]
 ])
 
 velocities = np.array([
-    [1.2e4, 1.6e4],
-    [1.2e4, 1.6e4],
-    [-2.4e4, -3.2e4]
+	[1.2e4, 1.6e4],
+	[1.2e4, 1.6e4],
+	[-2.4e4, -3.2e4]
 ])
 """
 p1 = Planet(mass=1e30, position=[-1.0e11, 0.0], velocity=[1.2e4, 1.6e4], acceleration=[0.0, 0.0])
 p2 = Planet(mass=1e30, position=[1.0e11, 0.0], velocity=[1.2e4, 1.6e4], acceleration=[0.0, 0.0])
 p3 = Planet(mass=1e30, position=[0.0, 0.0], velocity=[-2.4e4, -3.2e4], acceleration=[0.0, 0.0])
 
-print(p1.get_planet_data())
-print(p2.get_planet_data())
-print(p3.get_planet_data())
+dt = 3600
+steps = 5000
+history = []
 
-C1 = TBP_calculate.TBPCalculate(p1, p2)
-p1.set_accelation(TBP_calculate.TBPCalculate(p1, p2).calculate_gravity())
-p1.add_accelation(TBP_calculate.TBPCalculate(p1, p3).calculate_gravity())
+for step in range(steps):
+	# 가속도 초기화 후 계산
+	p1.set_accelation([0.0, 0.0])
+	p1.add_accelation(TBP_calculate.TBPCalculate(p1, p2).calculate_gravity())
+	p1.add_accelation(TBP_calculate.TBPCalculate(p1, p3).calculate_gravity())
 
-p2.set_accelation(TBP_calculate.TBPCalculate(p2, p1).calculate_gravity())
-p2.add_accelation(TBP_calculate.TBPCalculate(p2, p3).calculate_gravity())
+	p2.set_accelation([0.0, 0.0])
+	p2.add_accelation(TBP_calculate.TBPCalculate(p2, p1).calculate_gravity())
+	p2.add_accelation(TBP_calculate.TBPCalculate(p2, p3).calculate_gravity())
 
-p3.set_accelation(TBP_calculate.TBPCalculate(p3, p1).calculate_gravity())
-p3.add_accelation(TBP_calculate.TBPCalculate(p3, p2).calculate_gravity())
-print(p1.get_planet_data())
-print(p2.get_planet_data())
-print(p3.get_planet_data())
+	p3.set_accelation([0.0, 0.0])
+	p3.add_accelation(TBP_calculate.TBPCalculate(p3, p1).calculate_gravity())
+	p3.add_accelation(TBP_calculate.TBPCalculate(p3, p2).calculate_gravity())
+
+	# 속도, 위치 업데이트
+	for p in [p1, p2, p3]:
+		p.accelation(dt)
+		p.move(dt)
+
+	# 위치 저장
+	history.append([p1.pos.copy(), p2.pos.copy(), p3.pos.copy()])
+print(history)
+
+history = np.array(history)
+print(history.shape)
+
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+fig, ax = plt.subplots(figsize=(8, 8), facecolor='black')
+ax.set_facecolor('black')
+ax.set_xlim(-3e11, 3e11)
+ax.set_ylim(-3e11, 3e11)
+ax.set_title('Three Body Problem', color='white')
+
+colors = ['cyan', 'orange', 'lime']
+dots = [ax.plot([], [], 'o', color=c, markersize=8)[0] for c in colors]
+lines = [ax.plot([], [], '-', color=c, alpha=0.4, linewidth=0.8)[0] for c in colors]
+
+trail_len = 300
+
+def update(frame):
+	for i in range(3):
+		dots[i].set_data([history[frame, i, 0]], [history[frame, i, 1]])
+		start = max(0, frame - trail_len)
+		lines[i].set_data(history[start:frame, i, 0], history[start:frame, i, 1])
+	return dots + lines
+
+ani = animation.FuncAnimation(fig, update, frames=range(0, steps, 2), interval=1, blit=True)
+plt.tight_layout()
+plt.show()

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Examples/Example_matplotlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Examples/Example_matplotlib.py" afterDir="false" />
+    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="피곤하다">
       <change beforePath="$PROJECT_DIR$/Three body Problem/Examples/TBP_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Examples/TBP_main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +28,9 @@
     "assignee": "jiwootv"
   }
 }]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9e7eb9a0-e1c7-48f4-a99a-4334d30cf2ef" />
+  </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/jiwootv/ThreeBodyProblem.git",
@@ -79,6 +78,19 @@
       <option name="presentableId" value="Default" />
       <updated>1777811480445</updated>
     </task>
+    <task id="LOCAL-00001" summary="피곤하다">
+      <option name="closed" value="true" />
+      <created>1777822942563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777822942563</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="피곤하다" />
+    <option name="LAST_COMMIT_MESSAGE" value="피곤하다" />
   </component>
 </project>
