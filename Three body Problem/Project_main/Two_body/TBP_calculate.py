@@ -11,7 +11,10 @@ class TBPCalculate:
 
 	def get_distance(self):
 		# 이건 굳이 설명 안할게요..
-		return math.sqrt((self.position1[0] - self.position2[0]) ** 2 + (self.position1[1] - self.position2[1]) ** 2)
+
+		# 2일차 추가 내용: 좀 수정할게 생김.
+		# 거리가 0에 가까워지면 힘이 한없이 커져서 거리 최솟값을 지정하려고 함.
+		return max(math.sqrt((self.position1[0] - self.position2[0]) ** 2 + (self.position1[1] - self.position2[1]) ** 2), 1e8)
 
 	def calculate_gravity(self):
 		# 행성 정보를 입력하면 1번 행성에 대해서 계산을 진행해주는 간단한(?) 함수입니다

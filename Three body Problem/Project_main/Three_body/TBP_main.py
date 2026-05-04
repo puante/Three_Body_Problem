@@ -7,7 +7,7 @@
 # position → m (미터)
 # velocity → m/s
 # acceleration → m/s²
-# dt → s (초)
+# datatime → s (초)
 # G → 6.674e-11 (N·m²/kg²)
 
 
