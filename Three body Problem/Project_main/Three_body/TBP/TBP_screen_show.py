@@ -10,11 +10,12 @@
 # datatime → s (초)
 # G → 6.674e-11 (N·m²/kg²)
 
-import math
 import sys
 import numpy as np
 import TBP_calculate
 from TBP_data_load import TBPjson
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 
 class Planet:
@@ -110,14 +111,16 @@ if len(sys.argv) > 1:
 		history.append([p1.pos.copy(), p2.pos.copy(), p3.pos.copy()])
 	history = np.array(history)
 
-	import matplotlib.pyplot as plt
-	import matplotlib.animation as animation
+	plt.rcParams['font.family'] = 'Malgun Gothic'
+	plt.rcParams['axes.unicode_minus'] = False
 
 	fig, ax = plt.subplots(figsize=(8, 8), facecolor='black')
 	ax.set_facecolor('black')
 	ax.set_xlim(-3e11, 3e11)
 	ax.set_ylim(-3e11, 3e11)
 	ax.set_title('Three Body Problem', color='white')
+
+	time_text = ax.text(0.02, 0.97, '', transform=ax.transAxes, color='white', fontsize=10, va='top')
 
 	colors = ['cyan', 'orange', 'lime']
 	dots = [ax.plot([], [], 'o', color=c, markersize=8)[0] for c in colors]
@@ -127,14 +130,30 @@ if len(sys.argv) > 1:
 	print(trail_len)
 
 
+
 	def update(frame):
+		if frame < 0:
+			time_text.set_text(f'시작까지 {abs(frame)//1000+1}초...')
+			for i in range(3):
+				dots[i].set_data([], [])
+				lines[i].set_data([], [])
+			return dots + lines + [time_text]
+
 		for i in range(3):
 			dots[i].set_data([history[frame, i, 0]], [history[frame, i, 1]])
 			start = max(0, frame - trail_len)
 			lines[i].set_data(history[start:frame, i, 0], history[start:frame, i, 1])
-		return dots + lines
+
+		elapsed = frame * datatime
+		days = int(elapsed // 86400)
+		years = days // 365
+		remaining_days = days % 365
+		time_text.set_text(f'경과 시간: {years}년 {remaining_days}일')
+
+		return dots + lines + [time_text]
 
 
-	ani = animation.FuncAnimation(fig, update, frames=range(0, steps, 2), interval=1, blit=True)
+	delay_frames = int(3000/interval)  # 3초 대기 (interval 단위)
+	ani = animation.FuncAnimation(fig, update, frames=range(-delay_frames, steps, 2), interval=interval, blit=True)
 	plt.tight_layout()
 	plt.show()

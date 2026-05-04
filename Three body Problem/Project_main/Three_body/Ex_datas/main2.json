@@ -35,9 +35,9 @@
         }
     },
     "simconfig": {
-        "dt": 3600.0,
+        "dt": 86400.0,
         "steps": 5000,
-        "interval": 10,
-        "trail_len": 30000
+        "interval": 1,
+        "trail_len": 300
     }
 }

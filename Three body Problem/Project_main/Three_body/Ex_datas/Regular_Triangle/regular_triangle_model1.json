@@ -1,0 +1,26 @@
+{
+    "_coment1": "정삼각형 대칭 궤도 - A->B->C->A 방향",
+    "planetdata": {
+        "p1": {
+            "mass": 1e30,
+            "position": [0.0, 1.0e11],
+            "velocity": [8.0e3, 0.0]
+        },
+        "p2": {
+            "mass": 1e30,
+            "position": [8.66e10, -5.0e10],
+            "velocity": [-4.0e3, -6.928e3]
+        },
+        "p3": {
+            "mass": 1e30,
+            "position": [-8.66e10, -5.0e10],
+            "velocity": [-4.0e3, 6.928e3]
+        }
+    },
+    "simconfig": {
+        "dt": 3600,
+        "steps": 5000,
+        "interval": 10,
+        "trail_len": 300
+    }
+}

@@ -11,9 +11,10 @@
 # G → 6.674e-11 (N·m²/kg²)
 
 
-import math
 import numpy as np
-import TBP_calculate
+import TBP.TBP_calculate
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 class Planet:
 	def __init__(self, mass, position, velocity, acceleration):
@@ -44,6 +45,7 @@ class Planet:
 	def add_accelation(self, value):
 		self.acc += np.array(value)
 
+
 """
 masses = np.array([1e30, 1e30, 1e30])
 
@@ -70,16 +72,16 @@ history = []
 for step in range(steps):
 	# 가속도 초기화 후 계산
 	p1.set_accelation([0.0, 0.0])
-	p1.add_accelation(TBP_calculate.TBPCalculate(p1, p2).calculate_gravity())
-	p1.add_accelation(TBP_calculate.TBPCalculate(p1, p3).calculate_gravity())
+	p1.add_accelation(TBP.TBP_calculate.TBPCalculate(p1, p2).calculate_gravity())
+	p1.add_accelation(TBP.TBP_calculate.TBPCalculate(p1, p3).calculate_gravity())
 
 	p2.set_accelation([0.0, 0.0])
-	p2.add_accelation(TBP_calculate.TBPCalculate(p2, p1).calculate_gravity())
-	p2.add_accelation(TBP_calculate.TBPCalculate(p2, p3).calculate_gravity())
+	p2.add_accelation(TBP.TBP_calculate.TBPCalculate(p2, p1).calculate_gravity())
+	p2.add_accelation(TBP.TBP_calculate.TBPCalculate(p2, p3).calculate_gravity())
 
 	p3.set_accelation([0.0, 0.0])
-	p3.add_accelation(TBP_calculate.TBPCalculate(p3, p1).calculate_gravity())
-	p3.add_accelation(TBP_calculate.TBPCalculate(p3, p2).calculate_gravity())
+	p3.add_accelation(TBP.TBP_calculate.TBPCalculate(p3, p1).calculate_gravity())
+	p3.add_accelation(TBP.TBP_calculate.TBPCalculate(p3, p2).calculate_gravity())
 
 	# 속도, 위치 업데이트
 	for p in [p1, p2, p3]:
@@ -93,9 +95,6 @@ print(history)
 history = np.array(history)
 print(history.shape)
 
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-
 fig, ax = plt.subplots(figsize=(8, 8), facecolor='black')
 ax.set_facecolor('black')
 ax.set_xlim(-3e11, 3e11)
@@ -108,12 +107,14 @@ lines = [ax.plot([], [], '-', color=c, alpha=0.4, linewidth=0.8)[0] for c in col
 
 trail_len = 300
 
+
 def update(frame):
 	for i in range(3):
 		dots[i].set_data([history[frame, i, 0]], [history[frame, i, 1]])
 		start = max(0, frame - trail_len)
 		lines[i].set_data(history[start:frame, i, 0], history[start:frame, i, 1])
 	return dots + lines
+
 
 ani = animation.FuncAnimation(fig, update, frames=range(0, steps, 2), interval=1, blit=True)
 plt.tight_layout()
