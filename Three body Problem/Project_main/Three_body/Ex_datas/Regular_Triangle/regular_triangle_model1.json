@@ -21,6 +21,7 @@
         "dt": 3600,
         "steps": 5000,
         "interval": 10,
-        "trail_len": 300
+        "trail_len": 300,
+        "xlim": 3e11
     }
 }

@@ -38,6 +38,7 @@
         "dt": 3600.0,
         "steps": 5000,
         "interval": 10,
-        "trail_len": 30000
+        "trail_len": 30000,
+        "xlim": 3e11
     }
 }

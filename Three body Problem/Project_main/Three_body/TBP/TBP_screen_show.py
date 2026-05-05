@@ -70,11 +70,8 @@ if len(sys.argv) > 1:
 	p1_data, p2_data, p3_data = R.get_value()
 	sc = R.file_data.get('simconfig', {})
 
+	print(sc)
 
-
-	print(p1_data)
-	print(p2_data)
-	print(p3_data)
 	p1 = Planet(mass=p1_data['mass'], position=p1_data['position'], velocity=p1_data['velocity'],
 	            acceleration=[0.0, 0.0])
 	p2 = Planet(mass=p2_data['mass'], position=p2_data['position'], velocity=p2_data['velocity'],
@@ -86,6 +83,8 @@ if len(sys.argv) > 1:
 	steps = int(sc.get('steps', 5000))
 	interval = int(sc.get('interval', 10))
 	trail_len = int(sc.get('trail_len', 300))
+	print(sc)
+	xlim = float(sc.get('xlim', 3e11))
 	history = []
 
 	for step in range(steps):
@@ -116,8 +115,10 @@ if len(sys.argv) > 1:
 
 	fig, ax = plt.subplots(figsize=(8, 8), facecolor='black')
 	ax.set_facecolor('black')
-	ax.set_xlim(-3e11, 3e11)
-	ax.set_ylim(-3e11, 3e11)
+	print(3e11)
+	print(xlim)
+	ax.set_xlim(-xlim, xlim)
+	ax.set_ylim(-xlim, xlim)
 	ax.set_title('Three Body Problem', color='white')
 
 	time_text = ax.text(0.02, 0.97, '', transform=ax.transAxes, color='white', fontsize=10, va='top')

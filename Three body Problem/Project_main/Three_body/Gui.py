@@ -15,6 +15,7 @@ import sys
 import os
 import tempfile
 
+DEBUG_MODE = True
 
 class TBPGUI:
 	def __init__(self, root):
@@ -59,6 +60,7 @@ class TBPGUI:
 			"steps": ("총 프레임 수", "5000"),
 			"interval": ("애니메이션 속도 (ms)", "10"),
 			"trail_len": ("궤적 길이", "300"),
+			"xlim": ("화면 범위 (m)", "3e11"),
 		}
 
 		for key, (label, default) in sim_fields.items():
@@ -99,6 +101,7 @@ class TBPGUI:
 				"steps": self._get_int('steps'),
 				"interval": self._get_int('interval'),
 				"trail_len": self._get_int('trail_len'),
+				"xlim": self._get_float('xlim'),
 			}
 		}
 
@@ -136,7 +139,7 @@ class TBPGUI:
 
 		if 'simconfig' in data:
 			sc = data['simconfig']
-			for key in ['dt', 'steps', 'interval', 'trail_len']:
+			for key in ['dt', 'steps', 'interval', 'trail_len', 'xlim']:
 				if key in sc:
 					self.entries[key].delete(0, tk.END)
 					self.entries[key].insert(0, sc[key])
@@ -173,11 +176,13 @@ class TBPGUI:
 			tmp = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False, encoding='utf-8')
 			json.dump(data, tmp, ensure_ascii=False)
 			tmp.close()
-			if getattr(sys, 'frozen', False):
+			if getattr(sys, 'frozen', False) and not DEBUG_MODE:
 				exe_dir = os.path.dirname(sys.executable)
 				screen_exe = os.path.join(exe_dir, 'TBP/TBP_screen_show.exe')
 				subprocess.Popen([screen_exe, tmp.name])
 			else:
+				print(DEBUG_MODE)
+				print("SUCTION")
 				subprocess.Popen([sys.executable, 'TBP/TBP_screen_show.py', tmp.name])
 		except Exception as e:
 			messagebox.showerror("오류", f"실행에 실패하였습니다. {e}")
