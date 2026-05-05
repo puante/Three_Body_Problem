@@ -9,28 +9,38 @@ Licensed under the MIT License
 
 import tkinter as tk
 from tkinter import filedialog, messagebox, Menu
+from PIL import Image, ImageTk
 import json
 import subprocess
 import sys
 import os
+import webbrowser
 import tempfile
 
+# EXE 빌드 시에는 반드시! 아래의 항목을 False로 바꿔놓고 작업하시오.
 DEBUG_MODE = True
 
 class TBPGUI:
 	def __init__(self, root):
 		self.root = root
 		self.root.title("Three Body Problem")
-		self.root.geometry("450x650")
+		self.root.geometry("450x700")
 		self.file_path = None
 		self.entries = {}
 
 		# 메뉴바
+		# 메뉴바
 		menubar = Menu(root)
+
 		file_menu = Menu(menubar, tearoff=0)
 		file_menu.add_command(label="로드", command=self.load_file)
 		file_menu.add_command(label="저장", command=self.save_file)
 		menubar.add_cascade(label="파일", menu=file_menu)
+
+		credit_menu = Menu(menubar, tearoff=0)
+		credit_menu.add_command(label="프로그램 정보", command=self.credits)
+		menubar.add_cascade(label="기타", menu=credit_menu)
+
 		root.config(menu=menubar)
 
 		# 행성 입력 필드
@@ -187,9 +197,43 @@ class TBPGUI:
 		except Exception as e:
 			messagebox.showerror("오류", f"실행에 실패하였습니다. {e}")
 
+	def credits(self):
+		popup = tk.Toplevel(self.root)
+		popup.title("프로그램 정보")
+		popup.geometry("250x230")
+		popup.iconbitmap("TBP/image/TBP_program_icon.ico")
+		popup.resizable(False, False)
+
+		# 이미지 불러오기
+		img = Image.open("TBP/image/TBP_simulator.png")
+		img = img.resize((100, 100))
+		photo = ImageTk.PhotoImage(img)
+
+		# 이미지 유지 (중요)
+		popup.image = photo
+
+		# 제목
+		title = tk.Label(popup, text="TBP Simulator V 1.1", font=("맑은 고딕", 14, "bold"))
+		title.pack(pady=10)
+
+		# 이미지
+		img_label = tk.Label(popup, image=photo)
+		img_label.pack(pady=5)
+
+		# 라벨들
+		tk.Label(popup, text="이 프로그램은 무료로 해줍니다!\n삼체문제 시뮬레이션이요!").pack(pady=2)
+
+		tk.Button(
+			popup,
+			text="GitHub 바로가기",
+			command=lambda: webbrowser.open("https://github.com/puante/Three_Body_Problem"),
+			bg="black",
+			fg="white"
+		).pack(pady=5)
 
 if __name__ == "__main__":
 	R = tk.Tk()
 	R.iconbitmap("TBP/image/TBP_program_icon.ico")
+	R.resizable(False, False)
 	app = TBPGUI(R)
 	R.mainloop()

@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="Readme 추가, exe로 V1.0 배포">
+    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="새로운 행성계 맵 추가 및 관찰 범위 설정">
+      <change afterPath="$PROJECT_DIR$/Patch_Notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/image/TBP_simulator.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Example_matplotlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Example_matplotlib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/TBP simulator V 1.0/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/TBP simulator V 1.0/README.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Example_matplotlib.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_calculate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_data_load.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_screen_show.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TwoBody.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/PycharmProjects/Three_Body_Problem&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Example_matplotlib.executor": "Run",
+    "Python.Gui.executor": "Run",
+    "Python.TBP_calculate.executor": "Run",
+    "Python.TBP_data_load.executor": "Run",
+    "Python.TBP_main.executor": "Run",
+    "Python.TBP_screen_show.executor": "Run",
+    "Python.TwoBody.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/PC/PycharmProjects/Three_Body_Problem/Three body Problem/Project_main/Three_body/TBP/image",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\Three_Body_Problem\Three body Problem\Project_main\Three_body\TBP\image" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Two_body" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body" />
     </key>
@@ -141,8 +143,27 @@
       <option name="project" value="LOCAL" />
       <updated>1777960064942</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="새로운 행성계 맵 추가 및 관찰 범위 설정">
+      <option name="closed" value="true" />
+      <created>1777992827801</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777992827801</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="피곤하다" />
@@ -150,6 +171,7 @@
     <MESSAGE value="GUI를 통한 편의성 정상화 및 이체문제 관련 추가" />
     <MESSAGE value="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료" />
     <MESSAGE value="Readme 추가, exe로 V1.0 배포" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme 추가, exe로 V1.0 배포" />
+    <MESSAGE value="새로운 행성계 맵 추가 및 관찰 범위 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="새로운 행성계 맵 추가 및 관찰 범위 설정" />
   </component>
 </project>
