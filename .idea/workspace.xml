@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="GUI를 통한 편의성 정상화 및 이체문제 관련 추가">
-      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Regular_Triangle/regular_triangle_model1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Regular_Triangle/regular_triangle_model2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/__init__.py" afterDir="false" />
+    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료">
+      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/image/TBP_program_icon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Three Body Problem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Three_Body_Problem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Examples/TBPmodule/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/main2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/main1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/main1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/test1.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_calculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/TBP_calculate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_data_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/TBP_data_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP_screen_show.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/TBP_screen_show.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Three body Problem/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,32 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Example_matplotlib.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Gui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_calculate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_data_load.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TBP_screen_show.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TwoBody.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/PycharmProjects/Three Body Problem/Three body Problem/Project_main/Two_body&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Python&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Example_matplotlib.executor": "Run",
+    "Python.Gui.executor": "Run",
+    "Python.TBP_calculate.executor": "Run",
+    "Python.TBP_data_load.executor": "Run",
+    "Python.TBP_main.executor": "Run",
+    "Python.TBP_screen_show.executor": "Run",
+    "Python.TwoBody.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/PC/PycharmProjects/Three_Body_Problem",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Two_body" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body\TBP\image" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body\TBP" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Project_main\Three_body\Ex_datas\Regular_Triangle" />
       <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Examples" />
-      <recent name="C:\Users\PC\PycharmProjects\Three Body Problem\Three body Problem\Examples\TBPmodule" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -126,13 +121,30 @@
       <option name="project" value="LOCAL" />
       <updated>1777890924013</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료">
+      <option name="closed" value="true" />
+      <created>1777936135744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777936135744</updated>
+    </task>
+    <task id="LOCAL-00005" summary="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료">
+      <option name="closed" value="true" />
+      <created>1777936146192</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777936146192</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="피곤하다" />
     <MESSAGE value="기본 모델 완성!" />
     <MESSAGE value="GUI를 통한 편의성 정상화 및 이체문제 관련 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI를 통한 편의성 정상화 및 이체문제 관련 추가" />
+    <MESSAGE value="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료" />
   </component>
 </project>

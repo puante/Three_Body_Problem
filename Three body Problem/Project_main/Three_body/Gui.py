@@ -1,8 +1,18 @@
+"""
+Project: 삼체 문제 시뮬레이션 프로그램 제작 및 이를 통한 카오스 이론 분석
+마지막 수정일: 2026.05.05
+현 버전: V 1.0
+Copyright (c) 2026 PuantE
+Licensed under the MIT License
+"""
+
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, Menu
 import json
 import subprocess
 import sys
+import os
 import tempfile
 
 
@@ -163,12 +173,18 @@ class TBPGUI:
 			tmp = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False, encoding='utf-8')
 			json.dump(data, tmp, ensure_ascii=False)
 			tmp.close()
-			subprocess.Popen([sys.executable, "TBP/TBP_screen_show.py", tmp.name])
+			if getattr(sys, 'frozen', False):
+				exe_dir = os.path.dirname(sys.executable)
+				screen_exe = os.path.join(exe_dir, 'TBP/TBP_screen_show.exe')
+				subprocess.Popen([screen_exe, tmp.name])
+			else:
+				subprocess.Popen([sys.executable, 'TBP/TBP_screen_show.py', tmp.name])
 		except Exception as e:
 			messagebox.showerror("오류", f"실행에 실패하였습니다. {e}")
 
 
 if __name__ == "__main__":
 	R = tk.Tk()
+	R.iconbitmap("TBP/image/TBP_program_icon.ico")
 	app = TBPGUI(R)
 	R.mainloop()
