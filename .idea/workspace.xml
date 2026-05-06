@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="분노의 빌드작업 및 코딩레퍼런스 추가" />
+    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="분노의 빌드작업 및 코딩레퍼런스 추가">
+      <change afterPath="$PROJECT_DIR$/docs/references/1) 삼체문제란" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778055039835</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="분노의 빌드작업 및 코딩레퍼런스 추가">
+      <option name="closed" value="true" />
+      <created>1778055128785</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778055128785</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
