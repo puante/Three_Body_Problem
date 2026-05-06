@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Three body Problem" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/build" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/output" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/docs" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (오목봇)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
