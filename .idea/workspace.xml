@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="새로운 행성계 맵 추가 및 관찰 범위 설정">
-      <change afterPath="$PROJECT_DIR$/Patch_Notes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/image/TBP_simulator.png" afterDir="false" />
+    <list default="true" id="e3fc1d22-c170-4d86-8138-5893b0fc5e9d" name="변경" comment="V 1.1 빌드 및 출시&#10;마크다운 파일 정리&#10;추가 gui 파일 정돈">
+      <change afterPath="$PROJECT_DIR$/docs/coding_references/about_build.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/TBP simulator V 1.0/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/TBP simulator V 1.0/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Alpha_Centauri/data1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Alpha_Centauri/data1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Solar_System/main1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/Ex_datas/Solar_System/main1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/TBP_screen_show.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Three body Problem/Project_main/Three_body/TBP/TBP_screen_show.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/TBP simulator V 1.0/TBP/TBP_screen_show.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/TBP simulator V 1.1/Gui.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/TBP simulator V 1.1/Gui.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/TBP simulator V 1.1/TBP/TBP_screen_show.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/TBP simulator V 1.1/TBP/TBP_screen_show.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Gui.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/TBP_screen_show.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777992827801</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="V 1.1 빌드 및 출시&#10;마크다운 파일 정리&#10;추가 gui 파일 정돈">
+      <option name="closed" value="true" />
+      <created>1777995757570</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777995757570</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +185,7 @@
     <MESSAGE value="파일 추가 및 디렉터리 정리&#10;exe 빌드 준비 완료" />
     <MESSAGE value="Readme 추가, exe로 V1.0 배포" />
     <MESSAGE value="새로운 행성계 맵 추가 및 관찰 범위 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="새로운 행성계 맵 추가 및 관찰 범위 설정" />
+    <MESSAGE value="V 1.1 빌드 및 출시&#10;마크다운 파일 정리&#10;추가 gui 파일 정돈" />
+    <option name="LAST_COMMIT_MESSAGE" value="V 1.1 빌드 및 출시&#10;마크다운 파일 정리&#10;추가 gui 파일 정돈" />
   </component>
 </project>

@@ -35,10 +35,10 @@
         }
     },
     "simconfig": {
-        "dt": 3600.0,
+        "dt": 36000.0,
         "steps": 5000,
-        "interval": 10,
-        "trail_len": 300,
+        "interval": 1,
+        "trail_len": 3000,
         "xlim": 3000000000000000.0
     }
 }

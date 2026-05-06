@@ -1,26 +1,44 @@
 {
     "planetdata": {
         "p1": {
-            "mass": 1.989e30,
-            "position": [0.0, 0.0],
-            "velocity": [0.0, 0.0]
+            "mass": 1.989e+30,
+            "position": [
+                0.0,
+                0.0
+            ],
+            "velocity": [
+                0.0,
+                0.0
+            ]
         },
         "p2": {
-            "mass": 5.972e24,
-            "position": [1.496e11, 0.0],
-            "velocity": [0.0, 29783.0]
+            "mass": 5.972e+24,
+            "position": [
+                149600000000.0,
+                0.0
+            ],
+            "velocity": [
+                0.0,
+                29783.0
+            ]
         },
         "p3": {
-            "mass": 7.342e22,
-            "position": [1.49984e11, 0.0],
-            "velocity": [0.0, 30805.0]
+            "mass": 7.342e+22,
+            "position": [
+                149984000000.0,
+                0.0
+            ],
+            "velocity": [
+                0.0,
+                30805.0
+            ]
         }
     },
     "simconfig": {
-        "dt": 3600.0,
+        "dt": 36000.0,
         "steps": 50000,
-        "interval": 10,
-        "trail_len": 1000,
-        "xlim": 2e11
+        "interval": 1,
+        "trail_len": 10000,
+        "xlim": 200000000000.0
     }
 }
